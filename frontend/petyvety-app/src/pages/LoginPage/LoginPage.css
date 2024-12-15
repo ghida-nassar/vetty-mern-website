@@ -1,0 +1,112 @@
+/* Center the login page content */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:140px;
+  
+}
+
+/* Styling for the login form */
+.login-form {
+  max-width: 500px;
+  max-height: 400px !important;
+  width: 100%;
+  padding: 30px;
+  background-color: #f3ede5;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers all child elements horizontally */
+  text-align: center; /* Aligns text and child elements centrally */
+}
+
+/* Image container styling */
+.image-container-login {
+  margin-top: -207px;
+}
+
+.animal-login {
+  max-width: 230px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* Form group styling */
+.login-form .form-group {
+  width: 100%; /* Ensures input fields stretch within the form */
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers labels and inputs */
+}
+
+/* Label styling */
+.login-form label {
+  display: block;
+  width: 450px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  border-color: #b8956f;
+}
+
+/* Input field styling */
+.login-form input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #c5a985 !important;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+/* Login button styling */
+.login-form button {
+  width: 60%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #d2b48c; /* Beige color */
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the login button */
+.login-form button:hover {
+  background-color: #b8956f;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Sign up link styling */
+.login-page p {
+  margin-top: 20px;
+  color: #6d6c6c;
+}
+
+.login-page p button {
+  background: none;
+  margin-top: 10px;
+  width: 100px !important;
+  border: none;
+  color: #b8956f;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-page p button:hover {
+  color: #d2b48c;
+}

@@ -1,0 +1,108 @@
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: #f8f6f6;
+    color: #333;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .faq-left {
+    width: 35%;
+  }
+  
+  .faq-title {
+    font-size: 48px;
+    color: #d2b48c;
+    margin-bottom: 20px;
+  }
+  
+  .faq-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .faq-right {
+    width: 55%;
+  }
+  
+  .faq-item {
+    margin-bottom: 30px;
+    background-color: #d2b48c;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item.active {
+    background-color: #d1ae80;
+  }
+  
+  .faq-question {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .faq-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .faq-answer {
+    padding: 15px 20px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .faq-section {
+      flex-direction: column; /* Stack elements in a column */
+      padding: 30px; /* Adjust padding for smaller screens */
+    }
+  
+    .faq-left,
+    .faq-right {
+      width: 100%; /* Full width for both sections */
+      margin-bottom: 20px; /* Add spacing between stacked elements */
+    }
+  
+    .faq-title {
+      font-size: 36px; /* Adjust title size for smaller screens */
+      text-align: center;
+    }
+  
+    .faq-description {
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .faq-title {
+      font-size: 28px; /* Smaller title size for very small screens */
+    }
+  
+    .faq-question {
+      font-size: 14px;
+      padding: 10px 15px; /* Adjust padding for compact view */
+    }
+  
+    .faq-answer {
+      font-size: 12px;
+      padding: 10px 15px;
+    }
+  }
+  

@@ -1,0 +1,219 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.doctor-header {
+  background-color: #d2b48c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centers the header content horizontally */
+  align-items: center; /* Centers the items vertically */
+  position: relative; /* Create a containing block for absolute positioning */
+}
+
+.home-button-portfolio {
+  position: absolute;
+  left: 70px; /* Position the button to the left */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the button */
+  display: flex; /* Use flexbox for centering the image */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  width: 50px !important; /* Adjust width of the button */
+  height: 50px !important; /* Set a fixed height for the button */
+  padding: 5px; /* Adjust padding for better size */
+  background-color: #fff; /* Button background */
+  color: #333; /* Button text color */
+  border: 2px solid #d2b48c; /* Optional: Border color */
+  border-radius: 50%; /* Make it round */
+}
+
+.home-button-portfolio img {
+  max-width: 70%; /* Scale down the image to fit within the button */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+
+.doctor-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Main Content */
+.doctor-main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Doctor Card */
+.doctor-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  max-width: 350px;
+  padding: 20px;
+  text-align: center;
+}
+
+.doctor-card .doctor-image {
+  border-radius: 8px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.doctor-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.doctor-contact p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+  
+}
+
+.doctor-social-icons i {
+  margin: 0 5px;
+  color: #d2b48c; /* Dark green */
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.appointment-btn {
+  background-color: #d2b48c;
+  width: 300px !important;
+  height: 40px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 30px !important;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-btn:hover {
+  background-color: #d2b48c;
+}
+
+/* Doctor Info Section */
+.doctor-info {
+  flex: 2;
+  max-width: 800px;
+}
+
+.doctor-info h2,
+.doctor-info h3 {
+  color: #d2b48c;
+}
+
+.doctor-info p {
+  line-height: 1.6;
+  color: #555;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 5px solid #d2b48c;
+}
+
+/* Table Container */
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
+/* Enhanced Table Styling */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Table Header */
+table th {
+  background-color: #e0c095;
+  color: #fff;
+  padding: 15px;
+  text-align: left;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Table Rows */
+table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternate row colors */
+}
+
+table tr:hover {
+  background-color: #f5f5f5; /* Hover effect */
+  transition: background-color 0.3s ease;
+}
+
+/* Table Data Cells */
+table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+}
+
+/* Rounded Table Borders */
+table th:first-child,
+table td:first-child {
+  border-left: none;
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: none;
+}
+
+table tr:last-child td {
+  border-bottom: none; /* Remove bottom border for last row */
+}
+
+/* Responsive Table */
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+  }
+}
+
+
+

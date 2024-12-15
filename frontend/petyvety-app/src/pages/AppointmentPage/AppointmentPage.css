@@ -1,0 +1,110 @@
+.appointment-page {
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+    height:700px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3ede5;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(70, 37, 37, 0.452);
+  }
+
+  .top-appointment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .appointment-img{
+    width: 80% !important;
+    height: auto;
+    max-width: 100px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    border-radius: 20%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5px;
+  }
+
+  .form-group input[type="text"]{
+    width:72%;
+    border-color: #c5a985;
+    border-radius: 50px;
+  }
+  
+  input,
+  select
+  {
+    padding: 10px;
+    width:77%;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #d2b48c;
+    transition: border-color 0.3s ease;
+  }
+
+  .appointment-form .custom-datepicker{
+    width: 300% !important; /* Set the desired width */ /* Optional: Add padding for better spacing */
+    border: 1px solid #ddd; /* Match the input field border style */
+    border-radius: 5px;
+    margin-left: -110px;
+    font-size: 1rem;
+  }
+  
+  input:focus,
+  select:focus
+  {
+    outline: none;
+    border-color: #c5a985;
+  }
+  
+  button {
+    background-color: #d2b48c;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    width:45% !important;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-radius: 20px !important;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #c5a985;
+  }
+  
+  .error-message {
+    color: rgb(201, 75, 75);
+    font-size: 14px;
+    text-align: center;
+    margin-top: -10px;
+  }
+  

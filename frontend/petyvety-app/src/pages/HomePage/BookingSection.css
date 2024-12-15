@@ -1,0 +1,96 @@
+/* BookingSection.css */
+.booking-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* Swaps the order of the content and image */
+    padding: 50px;
+    background-color: #f6eefc00; /* Light gray background */
+  }
+  
+  .booking-content {
+    max-width: 50%;
+    padding-left: 20px; /* Adds space between the text and the image */
+  }
+  
+  .booking-content h2 {
+    font-size: 2rem;
+    color: #ad9269;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  .booking-content p {
+    font-size: 1.2rem;
+    color: #747373;
+    margin-bottom: 20px;
+  }
+  
+  .booking-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  .booking-content ul li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+  }
+  
+  .booking-button {
+    display: inline-block;
+    padding: 12px 20px;
+    width: 180px;
+    height: 42px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d2b48c; 
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 0px;
+  }
+  
+  .booking-button:hover {
+    background-color: #947e61; /* Darker blue on hover */
+  }
+  
+  .girl-image {
+    display: block;
+    width: 100%; /* Ensures the image scales responsively */
+    max-width: 500px; /* Adds a maximum width for the image */
+    border-radius: 30px;
+  }
+  
+
+  @media (max-width: 768px) {
+    .booking-section {
+      
+      flex-direction: column; /* Stack content and image vertically */
+      padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .booking-content h2{
+      display: flex;
+      
+    }
+
+    .booking-button{
+      display: flex;
+      align-content: center;
+      width: 200px !important;
+      justify-content: center; /* Center the button */
+    }
+  
+    .booking-content {
+      max-width: 100%; /* Ensure the content takes full width on smaller screens */
+      padding-right: 0; /* Remove padding */
+    }
+  
+    .girl-image {
+      display:none;/* Add some space between the content and image */
+    }
+  }
+  

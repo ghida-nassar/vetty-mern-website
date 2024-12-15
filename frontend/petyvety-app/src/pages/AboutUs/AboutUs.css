@@ -1,0 +1,69 @@
+
+
+
+  .about-us-page {
+    background-image: url('../../assets/images/girl-services.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+    padding: 40px 20px;
+    position: relative;
+  }
+  
+  .about-us-overlay {
+    background-color: rgba(250, 250, 250, 0.151);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(238, 234, 234, 0);
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .about-us-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #3f3425;
+    text-align: center;
+  }
+  
+  .about-us-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Enforces exactly 2 columns */
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .about-us-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .about-us-box h2 {
+    font-size: 1.5rem;
+    color: #d2b48c;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-box p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .about-us-thanks {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #312513;
+    font-style: italic;
+    text-align: center;
+  }
+  

@@ -1,0 +1,187 @@
+.about-us-section {
+    display: flex;
+    border-radius: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background-color: #f1e3d3; /* Light background */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .about-us-text {
+    max-width: 40%;
+    margin-left: 30px;
+    margin-top: 90px;
+    flex: 1;
+  }
+  
+  .about-us-text h2 {
+    font-size: 2rem;
+    color: #ad9269; /* Beige color */
+    margin-bottom: 10px;
+    display: flex;
+  }
+  
+  .about-us-text h3 {
+    font-size: 1.5rem;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-text p {
+    color: #838383;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-btn {
+    background-color: #c5a473; /* Beige button */
+    color: white;
+    max-height: 100px;
+    width: 230px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .about-us-btn:hover {
+    background-color: #947e61; /* Darker beige */
+  }
+
+  .about-us-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-text ul li {
+    font-size: 1rem;
+    color: #807f7f;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 50%;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  /* Adjust top margin of cards */
+  .about-us-card:nth-child(odd) {
+    margin-top: 10px; /* Smaller margin for odd cards */
+  }
+  
+  .about-us-card:nth-child(even) {
+    margin-top: 40px; /* Larger margin for even cards */
+  }
+  
+  .about-us-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-us-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-card h4 {
+    color: #ad9269;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+
+  }
+  
+  .about-us-card p {
+    color: #6e6e6e;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+
+    .about-us-text ul {
+        display: none; /* Hide the unordered list on smaller screens */
+      }
+
+    .about-us-section {
+      flex-direction: column; /* Stack text and cards vertically */
+      align-items: flex-start;
+    }
+  
+    .about-us-text {
+      margin-top: 20px;
+      max-width: 100%; /* Full width for text */
+      margin-bottom: 20px; /* Add spacing between sections */
+    }
+    
+    .about-us-cards {
+      width: 100%; /* Full width */
+      display: flex; /* Use flexbox for row alignment */
+      flex-wrap: wrap; /* Allow wrapping if cards overflow */
+      gap: 8px; /* Add space between cards */
+      justify-content: center; /* Center the cards */
+    }
+  
+    .about-us-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      width: 19%; /* Ensure cards are small enough to fit in a row */
+      height: 100px;
+    }
+  
+    .about-us-card h4 {
+      font-size: 0.9rem; /* Adjust font size */
+      margin-bottom: 0;
+    }
+  
+    .about-us-card p {
+      display: none; /* Hide additional text */
+    }
+    
+    .about-us-btn {
+      width: 200px !important;
+      height: 42px; /* Full width for button */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-us-cards {
+      gap: 5px; /* Reduce gap for very small screens */
+    }
+  
+    .about-us-card {
+      height: 80px; /* Reduce card height further */
+      padding: 10px;
+      width: 30%; /* Adjust width to fit smaller screens */
+    }
+  
+    .card-icon {
+      font-size: 1rem; /* Smaller icons */
+    }
+  
+    .about-us-card h4 {
+      font-size: 0.9rem;
+      padding-top: 10px;
+    }
+    
+  }
+  
+  
+  
