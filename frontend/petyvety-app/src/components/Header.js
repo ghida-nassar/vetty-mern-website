@@ -13,14 +13,14 @@ const Header = ({ onAppointmentClick }) => {
 
   const isTokenExpired = (token) => {
     try {
-      const { exp } = jwtDecode(token); // Decode the token to get expiration time
-      return exp * 1000 < Date.now();  // Convert `exp` to milliseconds and compare
+      const { exp } = jwtDecode(token); 
+      return exp * 1000 < Date.now();  
     } catch (e) {
-      return true; // If the token is invalid, consider it expired
+      return true; 
     }
   }; 
 
-  // Check for authentication on component load
+  
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token && !isTokenExpired(token)) {
@@ -43,7 +43,6 @@ const Header = ({ onAppointmentClick }) => {
     }
   };
 
-  
   return (
     <header className="header">
       <div className="logo">

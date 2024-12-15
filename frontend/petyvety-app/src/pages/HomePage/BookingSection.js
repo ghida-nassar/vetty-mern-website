@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './BookingSection.css'; // Import the CSS file for styling
+import './BookingSection.css'; 
 import girlServices from "../../assets/images/girl-services.jpg";
 import { jwtDecode } from 'jwt-decode';
 
@@ -9,19 +9,19 @@ const BookingSection = () => {
 
   const isTokenExpired = (token) => {
     try {
-      const { exp } = jwtDecode(token); // Decode the token to get expiration time
-      return exp * 1000 < Date.now(); // Convert `exp` to milliseconds and compare
+      const { exp } = jwtDecode(token); 
+      return exp * 1000 < Date.now(); 
     } catch (e) {
-      return true; // If the token is invalid, treat it as expired
+      return true; 
     }
   };
 
   const handleButtonClick = () => {
     const token = localStorage.getItem('token');
     if (!token || isTokenExpired(token)) {
-      navigate('/login'); // Redirect to login page if no token or token is expired
+      navigate('/login'); 
     } else {
-      navigate('/appointment'); // Redirect to appointment page if the token is valid
+      navigate('/appointment'); 
     }
   };
 
@@ -46,7 +46,7 @@ const BookingSection = () => {
       </div>
       <div>
         <img
-          src={girlServices} // Replace with your actual image URL
+          src={girlServices} 
           alt="Happy pet with a vet"
           className='girl-image'
         />

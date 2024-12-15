@@ -6,7 +6,7 @@ import { FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer">
-      {/* Wave SVG at the top */}
+      
       <div className="footer-wave">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -14,15 +14,15 @@ const Footer = () => {
           preserveAspectRatio="none"
         >
           <path
-            fill="#ffff" /* Footer background color */
+            fill="#ffff" 
             d="M0,160L48,186.7C96,213,192,267,288,256C384,245,480,171,576,149.3C672,128,768,160,864,186.7C960,213,1056,235,1152,213.3C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
       </div>
 
-      {/* Footer Content */}
+      
       <div className="footer-content">
-        {/* About Us Section */}
+       
         <div className="footer-section about-us">
           <h3>About</h3>
           <ul>
@@ -38,7 +38,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Us Section */}
+        
         <div className="footer-section contact-us">
            <h3>Contact Us</h3>
            <div className="social-icons">
@@ -56,7 +56,7 @@ const Footer = () => {
 
       </div>
 
-      {/* Footer Bottom */}
+      
       <div className="footer-bottom">
         <p>Version 1.0.0 | © {new Date().getFullYear()}</p>
       </div>

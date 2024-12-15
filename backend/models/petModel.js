@@ -22,15 +22,15 @@ const petSchema = new mongoose.Schema({
     },
     owner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User', // Assuming User model includes owner information
+        ref: 'User', 
         required: [true, 'Please specify the owner of the pet']
     },
     
 }, {
-    timestamps: true // Automatically adds createdAt and updatedAt fields
+    timestamps: true 
 });
 
-// Create and export the model
+
 const Pet = mongoose.model('Pet', petSchema);
 
 module.exports = Pet;

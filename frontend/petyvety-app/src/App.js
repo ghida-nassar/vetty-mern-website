@@ -10,8 +10,8 @@ import SignUpPage from './pages/SignUpPage/SignUpPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import FAQPage from './pages/FAQPage/FAQPage';
 const App = () => {
-  // Simulating user authentication state
-  const [isAuthenticated, setIsAuthenticated] = useState(true); // bde raje3a false
+  
+  const [isAuthenticated, setIsAuthenticated] = useState(true); 
   return (
     <Router>
       <Routes>
@@ -46,16 +46,15 @@ const App = () => {
   );
 };
 
-// Wrapper for displaying Header only on the Home page
+
 const HomePageWithHeader = ({ isAuthenticated }) => {
   const navigate = useNavigate();
 
-  // Handle Appointment button click
   const handleAppointmentClick = () => {
     if (isAuthenticated) {
-      navigate('/appointment'); // Navigate to appointment page if logged in
+      navigate('/appointment'); 
     } else {
-      navigate('/login'); // Redirect to login page if not logged in
+      navigate('/login'); 
     }
   };
   return (

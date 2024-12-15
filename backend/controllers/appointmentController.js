@@ -1,10 +1,9 @@
 const Appointment = require('../models/appointmentModel');
 const User = require('../models/userModel');
 
-// Function to book an appointment
 exports.bookAppointment = async (req, res, next) => {
     try {
-        // Check if the time slot on the selected date is already booked
+       
         const existingAppointment = await Appointment.findOne({
             date: req.body.date,
             timeSlot: req.body.timeSlot
@@ -17,7 +16,7 @@ exports.bookAppointment = async (req, res, next) => {
             });
         }
 
-        // Ensure reason is provided
+        
         if (!req.body.reason || req.body.reason.trim() === "") {
             return res.status(400).json({
                 status: 'fail',
@@ -25,16 +24,16 @@ exports.bookAppointment = async (req, res, next) => {
             });
         }
 
-        // Add the logged-in user's ID to the appointment
+        
         const appointmentData = {
-            user: req.user.id, // Assuming `req.user` contains the logged-in user's ID
+            user: req.user.id, 
             date: req.body.date,
             timeSlot: req.body.timeSlot,
             reason: req.body.reason,
-            status: 'scheduled' // Default status
+            status: 'scheduled' 
         };
 
-        // Create the new appointment
+        
         const newAppointment = await Appointment.create(appointmentData);
 
         res.status(201).json({
@@ -52,7 +51,7 @@ exports.bookAppointment = async (req, res, next) => {
 };
 
 
-// Function to get all appointments (for users to view their appointments)
+
 exports.getAllAppointments = async (req, res, next) => {
     try {
         const appointments = await Appointment.find({ user: req.user.id });
@@ -72,7 +71,7 @@ exports.getAllAppointments = async (req, res, next) => {
     }
 };
 
-// Function to get a specific appointment by ID
+
 exports.getAppointment = async (req, res, next) => {
     try {
         const appointment = await Appointment.findById(req.params.id);
@@ -98,12 +97,12 @@ exports.getAppointment = async (req, res, next) => {
     }
 };
 
-// Function to update an existing appointment (e.g., rescheduling)
+
 exports.updateAppointment = async (req, res, next) => {
     try {
         const appointment = await Appointment.findById(req.params.id);
 
-        // Check if the appointment exists
+        
         if (!appointment) {
             return res.status(404).json({
                 status: 'fail',
@@ -111,7 +110,7 @@ exports.updateAppointment = async (req, res, next) => {
             });
         }
 
-        // Check if the logged-in user is the owner (patient) or an admin
+        
         if (appointment.patient.toString() !== req.user.id && req.user.role !== 'admin') {
             return res.status(403).json({
                 status: 'fail',
@@ -119,7 +118,7 @@ exports.updateAppointment = async (req, res, next) => {
             });
         }
 
-        // If the user has permission, update the appointment
+        
         const updatedAppointment = await Appointment.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
             runValidators: true
@@ -139,12 +138,12 @@ exports.updateAppointment = async (req, res, next) => {
     }
 };
 
-// Function to delete an appointment
+
 exports.deleteAppointment = async (req, res, next) => {
     try {
         const appointment = await Appointment.findById(req.params.id);
 
-        // Check if the appointment exists
+        
         if (!appointment) {
             return res.status(404).json({
                 status: 'fail',
@@ -152,7 +151,7 @@ exports.deleteAppointment = async (req, res, next) => {
             });
         }
 
-        // Check if the logged-in user is the owner (patient) or an admin
+        
         if (appointment.patient.toString() !== req.user.id && req.user.role !== 'admin') {
             return res.status(403).json({
                 status: 'fail',
@@ -160,7 +159,7 @@ exports.deleteAppointment = async (req, res, next) => {
             });
         }
 
-        // If the user has permission, delete the appointment
+        
         await Appointment.findByIdAndDelete(req.params.id);
 
         res.status(204).json({
@@ -174,7 +173,7 @@ exports.deleteAppointment = async (req, res, next) => {
         });
     }
 };
-// Function to get available time slots for the doctor (calendar view)
+
 exports.getAvailableTimeSlots = async (req, res, next) => {
     try {
         const date = req.params.date;

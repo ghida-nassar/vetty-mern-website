@@ -4,8 +4,8 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 50px 20px;
-    background-color: #f1e3d3; /* Light background */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    background-color: #f1e3d3; 
+    flex-wrap: wrap; 
   }
   
   .about-us-text {
@@ -17,7 +17,7 @@
   
   .about-us-text h2 {
     font-size: 2rem;
-    color: #ad9269; /* Beige color */
+    color: #ad9269; 
     margin-bottom: 10px;
     display: flex;
   }
@@ -35,7 +35,7 @@
   }
   
   .about-us-btn {
-    background-color: #c5a473; /* Beige button */
+    background-color: #c5a473; 
     color: white;
     max-height: 100px;
     width: 230px;
@@ -47,7 +47,7 @@
   }
   
   .about-us-btn:hover {
-    background-color: #947e61; /* Darker beige */
+    background-color: #947e61; 
   }
 
   .about-us-text ul {
@@ -73,11 +73,11 @@
   
   /* Adjust top margin of cards */
   .about-us-card:nth-child(odd) {
-    margin-top: 10px; /* Smaller margin for odd cards */
+    margin-top: 10px; 
   }
   
   .about-us-card:nth-child(even) {
-    margin-top: 40px; /* Larger margin for even cards */
+    margin-top: 40px; 
   }
   
   .about-us-card {
@@ -114,26 +114,26 @@
   @media (max-width: 768px) {
 
     .about-us-text ul {
-        display: none; /* Hide the unordered list on smaller screens */
+        display: none; 
       }
 
     .about-us-section {
-      flex-direction: column; /* Stack text and cards vertically */
+      flex-direction: column; 
       align-items: flex-start;
     }
   
     .about-us-text {
       margin-top: 20px;
-      max-width: 100%; /* Full width for text */
-      margin-bottom: 20px; /* Add spacing between sections */
+      max-width: 100%; 
+      margin-bottom: 20px; 
     }
     
     .about-us-cards {
-      width: 100%; /* Full width */
-      display: flex; /* Use flexbox for row alignment */
-      flex-wrap: wrap; /* Allow wrapping if cards overflow */
-      gap: 8px; /* Add space between cards */
-      justify-content: center; /* Center the cards */
+      width: 100%; 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 8px; 
+      justify-content: center; 
     }
   
     .about-us-card {
@@ -142,38 +142,38 @@
       align-items: center;
       justify-content: center;
       padding: 15px;
-      width: 19%; /* Ensure cards are small enough to fit in a row */
+      width: 19%; 
       height: 100px;
     }
   
     .about-us-card h4 {
-      font-size: 0.9rem; /* Adjust font size */
+      font-size: 0.9rem; 
       margin-bottom: 0;
     }
   
     .about-us-card p {
-      display: none; /* Hide additional text */
+      display: none;
     }
     
     .about-us-btn {
       width: 200px !important;
-      height: 42px; /* Full width for button */
+      height: 42px; 
     }
   }
   
   @media (max-width: 480px) {
     .about-us-cards {
-      gap: 5px; /* Reduce gap for very small screens */
+      gap: 5px; 
     }
   
     .about-us-card {
-      height: 80px; /* Reduce card height further */
+      height: 80px; 
       padding: 10px;
-      width: 30%; /* Adjust width to fit smaller screens */
+      width: 30%; 
     }
   
     .card-icon {
-      font-size: 1rem; /* Smaller icons */
+      font-size: 1rem; 
     }
   
     .about-us-card h4 {

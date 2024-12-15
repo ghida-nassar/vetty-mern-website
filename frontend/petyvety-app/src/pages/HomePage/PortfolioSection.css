@@ -8,7 +8,7 @@
   text-align: left;
   border-radius: 30px;
   border-bottom: 1px solid #fafafa;
-  height: 450px; /* Default height */
+  height: 450px; 
 }
 
 .portfolio-content {
@@ -66,36 +66,36 @@
   width: 50%;
   overflow: hidden;
   height: 460px;
-  border-radius: 20px; /* Add border radius */
+  border-radius: 20px; 
 }
 
 .doctor-photo {
   width: 90%;
   height: 80%;
   margin-top: 45px;
-  object-fit: cover; /* Ensure the image fits perfectly */
-  border-radius: 30px; /* Match the border radius of the container */
+  object-fit: cover; 
+  border-radius: 30px; 
 }
 
-/* Remove the gradient overlay */
+
 .image-container::before {
   content: '';
-  display: none; /* Hide the gradient overlay */
+  display: none; 
 }
 
-/* Minimized Size Adjustments */
+
 @media (max-width: 1024px) {
   .portfolio-section {
     height: 315px;
     padding:30px;
-    margin-left: -60px; /* Reduced section height */
+    margin-left: -60px; 
   }
 
   .portfolio-content {
     width:100% !important;
     max-width: none;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the left */
+    align-items: flex-start; 
     text-align: left;
   }
 
@@ -106,10 +106,10 @@
     background-size: cover;
     background-position: center;
     background: linear-gradient(to left, rgba(248, 243, 243, 0) 0%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0 4px 8px rgba(238, 234, 234, 0); /* Shadow effect */
+    box-shadow: 0 4px 8px rgba(238, 234, 234, 0); 
     color: rgba(250, 246, 246, 0); 
     padding: 30px;
-    margin-left: 20px; /* Left alignment */
+    margin-left: 20px; 
   }
 
   .text-content h2,
@@ -117,7 +117,7 @@
     display: flex;
     color: rgb(126, 125, 125); 
     text-shadow: 1px 1px 3px rgba(206, 203, 203, 0); 
-    margin-left: 20px; /* Align text to the left */
+    margin-left: 20px; 
   }
 
   .text-content h2 {
@@ -128,14 +128,14 @@
   .portfolio-button {
     margin-top: 20px;
     border-color: #d2b48c;
-    padding: 10px 30px; /* Adjust button padding */
-    font-size: 0.9rem; /* Adjust button font size */
-    text-align: left; /* Align button to the left */
-    margin-left: 230px; /* Align to the left */
+    padding: 10px 30px;
+    font-size: 0.9rem; 
+    text-align: left; 
+    margin-left: 230px; 
   }
 
   .image-container {
-    display: none; /* Hide image container in minimized view */
+    display: none; 
   }
 }
 

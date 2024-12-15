@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -46,12 +44,12 @@ const SignUpPage = () => {
 
       if (response.status === 201) {
         const { token, data } = response.data;
-        localStorage.setItem('token', token); // Save the token in local storage
+        localStorage.setItem('token', token); 
         navigate('/profile', {state: { user: data.user } });
 
       }
     } catch (err) {
-      console.error('Sign-up Error:', err.response || err); // Log the full error
+      console.error('Sign-up Error:', err.response || err); 
       setError(err.response?.data?.message || 'An error occurred during sign-up.');
     }
   };
@@ -59,7 +57,7 @@ const SignUpPage = () => {
   return (
     <div className="signup-page">
       <div className="signup-container">
-        {/* Left Form Section */}
+        
         <div className="form-section">
           <h2>Create Your Account</h2>
           <form onSubmit={handleSubmit} className="signup-form">
@@ -173,7 +171,6 @@ const SignUpPage = () => {
           
         </div>
   
-        {/* Right Branding Section */}
         <div className="brand-section">
           <img
           src={greeting}

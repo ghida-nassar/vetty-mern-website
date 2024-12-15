@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './PortfolioSection.css'; // Add styles for the section
-import doctorPhoto from '../../assets/images/doctor-photo-minimize.jpg'; // Adjust the path as needed
+import './PortfolioSection.css'; 
+import doctorPhoto from '../../assets/images/doctor-photo-minimize.jpg'; 
 
 const PortfolioSection = () => {
   return (

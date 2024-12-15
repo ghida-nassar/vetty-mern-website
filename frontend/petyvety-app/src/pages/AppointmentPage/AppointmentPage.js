@@ -38,7 +38,7 @@ const AppointmentPage = () => {
   
     // Check if the user is logged in by verifying the token
     const token = localStorage.getItem('token');
-    console.log('Token:', token); // Log the token
+    console.log('Token:', token); 
     if (!token) {
       setError('User is not logged in. Please log in and try again.');
       return;
@@ -63,7 +63,7 @@ const AppointmentPage = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`, // Include the user's token
+          Authorization: `Bearer ${token}`, 
         },
         body: JSON.stringify({
           date: selectedDate,
@@ -72,11 +72,11 @@ const AppointmentPage = () => {
         }),
       });
   
-      console.log('Response Status:', response.status); // Log response status
-      console.log('Response Headers:', response.headers); // Log response headers
+      console.log('Response Status:', response.status); 
+      console.log('Response Headers:', response.headers); 
   
       const responseData = await response.json();
-      console.log('Response Data:', responseData); // Log response data
+      console.log('Response Data:', responseData); 
   
       if (response.ok) {
         console.log('Appointment booked successfully');
@@ -84,7 +84,7 @@ const AppointmentPage = () => {
 
         navigate('/profile', {
           state: {newAppointment},
-        }); // Redirect to the user's profile page
+        }); 
       } else {
         setError(responseData.message || 'Failed to book the appointment. Please try again.');
       }

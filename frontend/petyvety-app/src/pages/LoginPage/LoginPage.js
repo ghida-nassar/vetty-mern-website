@@ -18,21 +18,21 @@ const LoginPage = () => {
       const response = await axios.post(`${API_BASE_URL}/api/v1/auth/login`, { email, password });
 
       if (response.status === 200) {
-        // Assuming the backend returns a token or user data
+        
         const token = response.data.token;
 
-        // Save the token in localStorage (or context)
+        
         localStorage.setItem('token', token);
 
-        // Optionally, redirect after login success
-        navigate('/');  // You can change the path based on your app's routing
+       
+        navigate('/');  
       }
     } catch (err) {
       setError(err.response?.data?.message || 'Invalid email or password. Please try again.');
     }
   };
 
-  // Redirect to the signup page
+  
   const handleRedirect = () => {
     navigate('/signup');
   };

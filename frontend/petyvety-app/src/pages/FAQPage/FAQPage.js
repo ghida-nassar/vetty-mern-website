@@ -20,8 +20,8 @@ const faqs = [
     answer: 'It is recommended to have a wellness check-up every 6 months to ensure your pet stays healthy.',
   },
   {
-    question: 'What should I bring for my pet’s first visit?',
-    answer: 'Please bring your pet’s medical history, any medications they are taking, and their vaccination records.',
+    question: "What should I bring for my pet's first visit?",
+    answer: "Please bring your pet's medical history, any medications they are taking, and their vaccination records.",
   },
 ];
 

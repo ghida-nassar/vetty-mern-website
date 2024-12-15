@@ -70,8 +70,8 @@
   }
 
   .appointment-form .custom-datepicker{
-    width: 300% !important; /* Set the desired width */ /* Optional: Add padding for better spacing */
-    border: 1px solid #ddd; /* Match the input field border style */
+    width: 300% !important; 
+    border: 1px solid #ddd; 
     border-radius: 5px;
     margin-left: -110px;
     font-size: 1rem;

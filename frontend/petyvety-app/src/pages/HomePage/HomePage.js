@@ -1,4 +1,3 @@
-// src/pages/HomePage.js
 import React from 'react';
 import PortfolioSection from './PortfolioSection';
 import BookingSection from './BookingSection';
@@ -15,11 +14,10 @@ const HomePage = () => {
         <Blogs/>
         <Footer/>
         
-        {/* Additional sections for the homepage can be added here */}
+        
       </div>
 
     );
   };
-  
 
 export default HomePage;

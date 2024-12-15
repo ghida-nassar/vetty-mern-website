@@ -3,18 +3,18 @@ const jwt = require('jsonwebtoken');
 const { promisify } = require('util');
 const User = require('../models/userModel');
 const Pet = require('../models/petModel');
-const sendEmail = require('../utils/email'); // Assumes you have an email utility function for sending emails
+const sendEmail = require('../utils/email'); 
 const bcrypt = require('bcryptjs');
 const validator = require('validator');
 
-// Function to sign a JWT token
+
 const signToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, {
         expiresIn: process.env.JWT_EXPIRES_IN
     });
 };
 
-// Function to create and send the token to the user
+
 const createSendToken = (user, statusCode, message, res) => {
     const token = signToken(user._id);
     res.status(statusCode).json({
@@ -67,7 +67,7 @@ const createSendToken = (user, statusCode, message, res) => {
             return res.status(409).json({ message: "Username or email is already in use" });
         }
 
-        // Create the user
+        
         const newUser = await User.create({
             fullname,
             username,
@@ -79,20 +79,20 @@ const createSendToken = (user, statusCode, message, res) => {
 
         console.log('New User Created:', newUser);
 
-        // Handle pet creation if pet details are provided
+        
         if (petName && petType && petAge !== undefined) {
             try {
                 const pet = await Pet.create({
                     petName,
                     petType,
                     petAge,
-                    petMedicalHistory: petMedicalHistory || '', // Optional field
-                    owner: newUser._id, // Associate the pet with the user
+                    petMedicalHistory: petMedicalHistory || '', 
+                    owner: newUser._id, 
                 });
 
                 console.log('Pet Created:', pet);
 
-                // Add the pet to the user's pet array
+                
                 newUser.pets.push(pet._id);
                 await newUser.save();
                 console.log('Updated User After Adding Pet:', newUser);
@@ -110,7 +110,7 @@ const createSendToken = (user, statusCode, message, res) => {
     }
 };
 
-// User Login function
+
 exports.login = async (req, res) => {
     try{
       const { email, password } = req.body;
@@ -138,10 +138,10 @@ exports.login = async (req, res) => {
     }
 };
 
-// Middleware to protect routes (requires authentication)
+
 exports.protect = async (req, res, next) => {
     try {
-        // 1) Get token and check if it exists
+        
         let token;
         if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
             token = req.headers.authorization.split(' ')[1];
@@ -154,7 +154,7 @@ exports.protect = async (req, res, next) => {
             });
         }
 
-        // 2) Verify token
+        
         let decoded;
        try{
          decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET)
@@ -167,7 +167,7 @@ exports.protect = async (req, res, next) => {
          }
        }
 
-        // 3) Check if user still exists
+        
         const currentUser = await User.findById(decoded.id);
         if (!currentUser) {
             return res.status(401).json({
@@ -176,7 +176,7 @@ exports.protect = async (req, res, next) => {
             });
         }
 
-        // 4) Check if user changed password after the token was issued
+        
         if (currentUser.passwordChangedAfterIssuingToken(decoded.iat)) {
             return res.status(401).json({
                 status: 'fail',
@@ -184,7 +184,7 @@ exports.protect = async (req, res, next) => {
             });
         }
 
-        // Grant access to the protected route
+        
         req.user = currentUser;
         next();
     } catch (err) {
@@ -195,7 +195,7 @@ exports.protect = async (req, res, next) => {
     }
 };
 
-// Restrict to certain roles (admin, etc.)
+
 exports.restrictTo = (...roles) => {
     return (req, res, next) => {
         if (!roles.includes(req.user.role)) {
@@ -257,7 +257,7 @@ exports.forgotPassword = async (req, res, next) => {
     }
 };
 
-// Reset Password
+
 exports.resetPassword = async (req, res, next) => {
     try {
         // 1) Get user based on the token
@@ -282,7 +282,7 @@ exports.resetPassword = async (req, res, next) => {
         user.passwordResetExpires = undefined;
         await user.save();
 
-        // 3) Update changedPasswordAt property for the user (handled in userModel.js)
+        
 
         // 4) Log the user in, send JWT
         createSendToken(user, 200, res);
@@ -294,7 +294,7 @@ exports.resetPassword = async (req, res, next) => {
     }
 };
 
-// Update current user's password
+
 exports.updatePassword = async (req, res, next) => {
     try {
         // 1) Get user from collection

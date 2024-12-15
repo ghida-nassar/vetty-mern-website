@@ -2,7 +2,7 @@ const User = require('../models/userModel');
 const Appointment = require('../models/appointmentModel');
 
 
-// Function to get the current user profile
+
 exports.getUserProfile = async (req, res, next) => {
     try {
         const user = await User.findById(req.user.id);
@@ -27,7 +27,7 @@ exports.getUserProfile = async (req, res, next) => {
 };
 
 
-// Function to update the user profile
+
 exports.updateUserProfile = async (req, res, next) => {
     try {
         const updatedUser = await User.findByIdAndUpdate(req.user.id, req.body, {
@@ -54,7 +54,7 @@ exports.updateUserProfile = async (req, res, next) => {
     }
 };
 
-// Function to delete the user account
+
 exports.deleteUser = async (req, res, next) => {
     try {
         const user = await User.findByIdAndDelete(req.user.id);
@@ -76,7 +76,7 @@ exports.deleteUser = async (req, res, next) => {
     }
 };
 
-// Function to view user's appointments
+
 exports.getUserAppointments = async (req, res, next) => {
     try {
         const appointments = await Appointment.find({ user: req.user.id });
@@ -97,7 +97,7 @@ exports.getUserAppointments = async (req, res, next) => {
 
 exports.getAllUsers = async (req, res) => {
     try {
-      const users = await User.find(); // Fetch all users from the database
+      const users = await User.find(); 
   
       res.status(200).json({
         status: 'success',

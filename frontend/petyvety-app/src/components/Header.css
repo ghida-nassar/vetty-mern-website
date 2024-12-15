@@ -1,9 +1,9 @@
-/* Base header styles */
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f6eefc00; /* White background */
+  background-color: #f6eefc00; 
   padding: 15px 30px;
   box-shadow: 0 4px 8px rgba(248, 246, 246, 0.1);
   position: relative;
@@ -13,10 +13,10 @@
 .logo h1 {
   margin-left:40px;
   font-size: 30px;
-  color: #d2b48c; /* Beige color for the logo */
+  color: #d2b48c; 
 }
 
-/* Navigation styles */
+
 .navigation {
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@
 .navigation a,
 .book-appointment-btn {
   text-decoration: none;
-  color: #d2b48c; /* Beige color for text */
+  color: #d2b48c; 
   font-weight: bold;
   width: 200px !important;
   transition: color 0.3s ease;
@@ -49,7 +49,7 @@
 
 .navigation a:hover,
 .book-appointment-btn:hover {
-  color: #d8b18a; /* Lighter beige color on hover */
+  color: #d8b18a; 
 }
 
 .book-appointment-btn {
@@ -67,12 +67,12 @@
   margin-top: -10px !important;
 }
 
-/* Add styles for the restricted button list item */
+
 .restricted-btn{
   width:200px !important;
   margin-bottom: 15px;
 }
-/* Menu button for small screens */
+
 .menu-button {
   display: none;
   background: none;
@@ -82,13 +82,13 @@
   cursor: pointer;
 }
 
-/* Media queries for responsiveness */
+
 @media (max-width: 768px) {
   .navigation ul {
-    display: none; /* Hide links by default */
+    display: none; 
     flex-direction: column;
     position: absolute;
-    top: 70px; /* Below the header */
+    top: 70px; 
     right: 30px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -97,7 +97,7 @@
   }
 
   .navigation ul.active {
-    display: flex; /* Show links when active */
+    display: flex; 
   }
 
   .menu-button {
@@ -106,23 +106,23 @@
     margin-bottom: 5px;
     margin-right: 30px;
     border: none;
-    font-size: 24px; /* Icon size */
-    color: #d2b48c; /* Beige color */
+    font-size: 24px; 
+    color: #d2b48c; 
     cursor: pointer;
-    transition: none; /* Disable hover transitions */
+    transition: none; 
 }
 
-/* Remove hover effects */
+
 .menu-button:hover {
-  color: #d2b48c; /* Keep the original color */
-  background: none; /* No background change */
-} /* Show menu button on small screens */
+  color: #d2b48c; 
+  background: none; 
+} 
   
 
-  .book-appointment-btn {
-    width: 100%; /* Full width button inside the dropdown */
+.book-appointment-btn {
+    width: 100%; 
     text-align: center;
-  }
+}
 }
 
   

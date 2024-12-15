@@ -14,10 +14,10 @@ const PortfolioPage = () => {
 
   const isTokenExpired = (token) => {
     try {
-      const { exp } = jwtDecode(token); // Decode the token to get expiration time
-      return exp * 1000 < Date.now();  // Convert `exp` to milliseconds and compare
+      const { exp } = jwtDecode(token); 
+      return exp * 1000 < Date.now();  
     } catch (e) {
-      return true; // If token is invalid, treat it as expired
+      return true; 
     }
   };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutUsSection.css"; // CSS for styling
+import "./AboutUsSection.css"; 
 
 const AboutUsSection = () => {
   const services = [
@@ -7,25 +7,25 @@ const AboutUsSection = () => {
       title: "Clinic",
       description:
         "You may call us family veterinarians. We care for most pets when an illness or injury arises. We are also responsible for preventive health, ensuring your furry companions stay happy and healthy.",
-      icon: "👨‍⚕️", // Replace with an actual image if needed
+      icon: "👨‍⚕️", 
     },
     {
       title: "Mission",
       description:
         "Care for pets who are critically ill or injured is essential. When serious conditions arise while your pet is in a clinic or hospital, specialized veterinary support is required to provide the necessary care and treatment.",
-      icon: "🩺", // Replace with an actual image if needed
+      icon: "🩺", 
     },
     {
       title: "Services",
       description:
         "We're experts in the stomach and digestive system of animals. You might consult us for conditions like vomiting, diarrhea, or other gastrointestinal issues in your pet.",
-      icon: "💉", // Replace with an actual image if needed
+      icon: "💉", 
     },
     {
       title: "Team",
       description:
         "We use X-rays, ultrasound, and other imaging tests to diagnose conditions like fractures, internal injuries, or abnormalities in your pet's organs.",
-      icon: "👩‍⚕️", // Replace with an actual image if needed
+      icon: "👩‍⚕️", 
     },
   ];
 
@@ -35,7 +35,7 @@ const AboutUsSection = () => {
         <h2>We provide</h2>
         <h3>Here is a little more About Our Hospital Services</h3>
         <p>
-          We have several gift shops and hair salons on the hospital’s main campus. Our pharmacy provides prescription medication for patients and staff.
+          We have several gift shops and hair salons on the hospital's main campus. Our pharmacy provides prescription medication for patients and staff.
         </p>
         <ul>
           <li>✔ Expert Doctor</li>
